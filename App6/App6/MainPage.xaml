@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App6.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Entry Text="{Binding Usuario}" Placeholder="Usuario" />
+        <Entry Text="{Binding Contrasena}" Placeholder="Contraseña" IsPassword="True" />
+        <Label Text="Usuario o contraseña incorrectos" HorizontalOptions="Center" TextColor="Red" IsVisible="{Binding IsErrorLogin}"/>
+        <Button Text="Login" Command="{Binding LoginCommand}" />
+
+    </StackLayout>
+
+</ContentPage>
